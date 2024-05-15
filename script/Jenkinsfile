@@ -6,7 +6,12 @@ pipeline{
    stages{
     stage("maven"){
         steps{
-        sh 'mvn clean validate compile install test package'
+        sh 'mvn clean' 
+        sh 'validate' 
+        sh 'compile' 
+        sh 'install' 
+        sh 'test' 
+        sh 'package'
         }
     }
     stage('upload artifact'){
